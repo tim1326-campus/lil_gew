@@ -1,4 +1,12 @@
-76
+78  % Aktuelle Luftfeuchtigkeit
+75  % Schwellenwert Luftfeuchtigkeit
+6   Uhr erste Startzeit der Lampe
+8   Uhr erste Stopzeit der Lampe
+16  Uhr zweite Startzeit der Lampe
+21  Uhr zweite Stopzeit der Lampe
+2   Zyklus wach wievielen Stunden, der Ventilator angehen soll
+10  Einschaltdauer des Ventilators in Minuten
+
 
 
 
