@@ -32,131 +32,151 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
+<div class="contentshit" >
+<div class="container" style="color: white; font-family: Rockwell; margin-top: 0px;" id="ueberschriftContainer">
+    <div class="row" style="padding-top: 20px;">
         <div class="col">
         </div>
         <div class="col">
             <h2>Gewächshaussteuerung</h2>
         </div>
         <div class="col">
-            Geräte-Uhrzeit 17:05 Uhr
+               <p class="text" style="font-size: small; vertical-align: top;" align="right">Geräte-Uhrzeit 17:05 Uhr</p>
         </div>
     </div>
-    <div class="row text-center" style="justify-content: center">
-        Temperatur = ??? °C
-    </div>
-    <div class="row" style="justify-content: center">
-        Luftfeuchtigkeit = ???
+    <div class="row justify-content-center" style="">
+        <div class="col-2 rounded bg-dark bg-opacity-50" align="center">
+            Temperature = 69°C
+        </div>
+        <div class="col-1"></div>
+        <div class="col-2 rounded bg-dark bg-opacity-50" align="center">
+            Humidity = 69%
+        </div>
+
     </div>
 </div>
-<div class="contentshit" >
-    <div class="container bg-light bg-opacity-50 rounded-top border" style="padding-top: 10px">
+
+    <div class="container bg-light bg-opacity-50 rounded-top border" id="schwellenwert_luftfeutigkeit">
         <div class="row bg-secondary bg-opacity-75">
             <div class="col">
                 Schwellenwert der Luftfeuchtigkeit
             </div>
         </div>
         <div class="row">
-            <div class="col text-start">
+            <div class="col">
                 Aktuell geht der MistMaker bei einer Luftfeuchtigkeit von 60% an.
                 <div class="border-bottom border-secondary "></div>
             </div>
-            <div class="col-2">
-                <input type="email" class="form-control form-control-sm text-center" id="in_humidity"
-                       placeholder="Neuer Wert in % bspw.: '70'">
-            </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
+            <div class="col-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Neuer Wert">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </div>
 
-    <div class="container bg-light bg-opacity-50 rounded-top border">
+    <div class="container bg-light bg-opacity-50 rounded-top border" id="lampenzyklus">
         <div class="row bg-secondary bg-opacity-75">
             <div class="col">
                 Lampenzyklus
             </div>
         </div>
         <div class="row">
-            <div class="col text-start">
+            <div class="col-8 ">
                 Die erste Einschaltzeit der UV-Lampe beginnt um 6 Uhr und endet um 8 Uhr.
                 <div class="border-bottom border-secondary "></div>
             </div>
-            <div class="col-2 ">
-                <input type="email" class="form-control form-control-sm text-center" id="in_startLamp01"
-                       placeholder="Neue Startzeit bspw.: '5'">
-            </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
-            </div>
             <div class="col-2">
-                <input type="email" class="form-control form-control-sm text-center" id="in_endLamp01"
-                       placeholder="Neue Endzeit bspw.: '9'">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
+            <div class="col-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="row">
-            <div class="col text-start">
+            <div class="col-8 ">
                 Die zweite Einschaltzeit der UV-Lampe beginnt um 16 Uhr und endet um 21 Uhr.
                 <div class="border-bottom border-secondary "></div>
             </div>
-            <div class="col-2 ">
-                <input type="email" class="form-control form-control-sm text-center" id="in_startLamp02"
-                       placeholder="Neue Startzeit bspw.: '18'">
-            </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
-            </div>
             <div class="col-2">
-                <input type="email" class="form-control form-control-sm text-center" id="in_endLamp02"
-                       placeholder="Neue Endzeit bspw.: '23'">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
+            <div class="col-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="container bg-light bg-opacity-50 rounded-top border text-">
+    <div class="container bg-light bg-opacity-50 rounded-top border text-" id="ventilatorzyklus">
         <div class="row bg-secondary bg-opacity-75">
             <div class="col">
                 Ventilatorzyklus
             </div>
         </div>
         <div class="row">
-            <div class="col text-start">
+            <div class="col">
                 Der Ventilator schaltet sich alle 2 Stunden an.
                 <div class="border-bottom border-secondary "></div>
             </div>
-            <div class="col-2">
-                <input type="email" class="form-control form-control-sm text-center" id="in_humidity"
-                       placeholder="Neuer Wert in Minuten">
+            <div class="col-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
-            </div>
+
         </div>
-        <div class="row ">
-            <div class="col text-start" style="padding-bottom: 0px">
+        <div class="row">
+            <div class="col">
                 Der Ventilator bleibt dann für 25 Minuten angeschaltet.
                 <div class="border-bottom border-secondary "></div>
             </div>
-            <div class="col-2">
-                <input type="email" class="form-control form-control-sm text-center" id="in_humidity"
-                       placeholder="Neue Dauer in Minuten">
-            </div>
-            <div class="col-1">
-                <button class="btn btn-success btn-sm" type="submit">Bestätigen</button>
-            </div>
-        </div>
+            <div class="col-2 ">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Dauer min">
+                    <div class="input-group-append">
+                        <button class="btn btn-success btn-sm" type="button">submit</button>
+                    </div>
+                </div>
 
+            </div>
+
+        </div>
     </div>
 
-    <div class="container bg-secondary bg-opacity-50 rounded-top border " style="max-width: 500px">
+    <div class="container rounded-top border" style="max-width: 500px; background: linear-gradient(180deg, rgba(47,143,45,1) 0%, rgba(8,160,172,1) 100%, rgba(3,146,212,0) 100%);" id="manuelleSteuerung">
         <div class="row bg-secondary bg-opacity-75">
             <div class="col">
                 Manuelle Steuerung
@@ -206,7 +226,7 @@
         </div>
     </div>
 </div>
-</p>
+
 <p><a href="/?led=on">
     <button class="button">ON</button>
 </a></p>
