@@ -1,4 +1,28 @@
-<!DOCTYPE html>
+# Complete project details at https://RandomNerdTutorials.com
+import socket
+
+ts_hum = '60'
+
+
+def find_str(s, char):
+    index = 0
+
+    if char in s:
+        c = char[0]
+        for ch in s:
+            if ch == c:
+                if s[index:index+len(char)] == char:
+                    return index
+
+            index += 1
+
+    return -1
+
+def web_page():
+    f = open("lil_gew_Website/lilgewWebsite.html", "r")
+    temp = f.read()
+    f.close()
+    test='''<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -65,7 +89,8 @@
         </div>
         <div class="row">
             <div class="col">
-                Aktuell geht der MistMaker bei einer Luftfeuchtigkeit von 60% an.
+                Aktuell geht der MistMaker bei einer Luftfeuchtigkeit von '''+ ts_hum \
+         + '''% an.
                 <div class="border-bottom border-secondary "></div>
             </div>
             <div class="col-2 ">
@@ -94,24 +119,22 @@
                 <div class="border-bottom border-secondary "></div>
             </div>
             <div class="col-2">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="lamp1" type="number" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="lamp1">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="lamp1">submit</button>
                     </div>
                 </div>
-            </form>
+
             </div>
             <div class="col-2 ">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="lamp2" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="lamp2">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="lamp2">submit</button>
                     </div>
                 </div>
-              </form>
+
             </div>
         </div>
         <div class="row">
@@ -120,24 +143,22 @@
                 <div class="border-bottom border-secondary "></div>
             </div>
             <div class="col-2">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="lamp3" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="lamp1">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="lamp3">submit</button>
                     </div>
                 </div>
-            </form>
+
             </div>
             <div class="col-2 ">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="lamp4" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Stopzeit min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="lamp2">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="lamp4">submit</button>
                     </div>
                 </div>
-              </form>
+
             </div>
         </div>
     </div>
@@ -154,14 +175,12 @@
                 <div class="border-bottom border-secondary "></div>
             </div>
             <div class="col-2 ">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="vent_cyl" class="form-control form-control-sm text-center" placeholder="Startzeit min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Startzeit min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="vent_cyl_btn">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="vent">submit</button>
                     </div>
                 </div>
-              </form>
 
             </div>
 
@@ -172,14 +191,12 @@
                 <div class="border-bottom border-secondary "></div>
             </div>
             <div class="col-2 ">
-              <form action="/" method="GET">
                 <div class="input-group">
-                    <input type="number" name="vent_dur" class="form-control form-control-sm text-center" placeholder="Dauer min">
+                    <input type="text" class="form-control form-control-sm text-center" placeholder="Dauer min">
                     <div class="input-group-append">
-                        <button class="btn btn-success btn-sm" type="submit" id="vent_dur_btn">submit</button>
+                        <button class="btn btn-success btn-sm" type="button" id="vent_dur">submit</button>
                     </div>
                 </div>
-              </form>
 
             </div>
 
@@ -248,4 +265,43 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
-</html>
+</html>'''
+
+    html = ("""<html><head> <title>ESP Web Server</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,"> <style>html{font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}
+  h1{color: #0F3376; padding: 2vh;}p{font-size: 1.5rem;}.button{display: inline-block; background-color: #e7bd3b; border: none; 
+  border-radius: 4px; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
+  .button2{background-color: #4286f4;}</style></head><body> <h1>ESP Web Server</h1> 
+  <p>GPIO state: <strong>""" + '0' + """</strong></p><p><a href="/?led=on"><button class="button">ON</button></a></p>
+  <p><a href="/?led=off"><button class="button button2">OFF</button></a></p></body></html>""")
+    return bytearray(temp, 'utf-8')
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', 80))
+s.listen(5)
+
+
+while True:
+    conn, addr = s.accept()
+    print('Got a connection from %s' % str(addr))
+    request = conn.recv(1024)
+    request = str(request)
+    print('Content = %s' % request)
+    temp = request.find('/?ts_hum=')
+    if temp == 6:
+        temp = find_str(request,'/?ts_hum=') + 9
+        ts_hum = str(request[temp:temp+2])
+        print(ts_hum)
+
+    led_off = request.find('/?led=off')
+    if led_off == 6:
+        print('LED OFF')
+        #led.value(0)
+    response = web_page()
+    conn.send(b'HTTP/1.1 200 OK\n')
+    conn.send(b'Content-Type: text/html\n')
+    conn.send(b'Connection: close\n\n')
+    conn.sendall(response)
+    conn.close()
+    #exit()
+
